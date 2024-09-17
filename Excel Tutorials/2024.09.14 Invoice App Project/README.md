@@ -1,5 +1,7 @@
 # Excel Invoice Application
 
+[Watch Full Tutorial Here](#)  
+
 This repository contains a detailed guide for creating a fully functional invoice application in Microsoft Excel. The tutorial demonstrates how to design and automate various elements of an invoice using formulas, conditional formatting, and print settings.
 
 ## Table of Contents
@@ -28,7 +30,7 @@ This Excel invoice application is designed to automate the process of generating
 
 In this chapter, we set up the structure of the invoice, including headers for product details, quantity, price, discount, and total.
 
-1. **Headers:** Use cell formatting to create the titles of columns like "Product Name", "Quantity", "Unit Price", "Discount", and "Total Price".
+1. **Headers:** Create headers like "Product Name," "Quantity," "Unit Price," "Discount," and "Total Price."
 2. **Borders:** Ensure the table looks professional by adding borders to all cells that will hold data.
 
 ### Formatting the Cells
@@ -93,7 +95,7 @@ Steps:
 
 ## Special Notes and Instructions
 
-At the bottom of the invoice, there is a **Special Notes and Instructions** section. This allows the user to input any additional information relevant to the customer.
+At the bottom of the invoice, there is a **Special Notes and Instructions** section. This allows users to input any additional information relevant to the customer.
 
 Steps:
 1. Merge the required cells across the bottom of the invoice.
@@ -121,4 +123,3 @@ Finally, you can export the invoice as a **PDF**:
 This project demonstrates how to create a structured and automated invoice application using Excel. The flexibility of Excel formulas, cell formatting, and print controls allows users to customize this application according to their specific needs.
 
 For further customization or requests, feel free to [open an issue](https://github.com/your-repo/issues) or contact me.
-```
