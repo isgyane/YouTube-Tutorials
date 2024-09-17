@@ -2,27 +2,22 @@
 
 [Watch Full Tutorial Here](#)  
 
-This repository contains a detailed guide for creating a fully functional invoice application in Microsoft Excel. The tutorial demonstrates how to design and automate various elements of an invoice using formulas, conditional formatting, and print settings.
+This tutorial guides you through the process of creating a fully functional and automated invoice application in Microsoft Excel. It covers key steps such as designing the invoice layout, applying necessary formatting, and using essential formulas to calculate totals, discounts, and more. The tutorial also demonstrates how to apply conditional formatting, manage print settings for a professional look, and ensure the invoice is ready for export as a PDF. With this step-by-step guide, you can streamline the invoicing process and easily generate professional invoices for your business.
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Setting Up the Invoice](#setting-up-the-invoice)
+1. [Setting Up the Invoice](#setting-up-the-invoice)
    - 2.1 [Designing the Layout](#designing-the-layout)
    - 2.2 [Formatting the Cells](#formatting-the-cells)
-3. [Formulas Used](#formulas-used)
+2. [Formulas Used](#formulas-used)
    - 3.1 [Total Calculation](#total-calculation)
    - 3.2 [Discount Application](#discount-application)
    - 3.3 [Conditional Formatting for Discounts](#conditional-formatting-for-discounts)
-4. [Special Notes and Instructions](#special-notes-and-instructions)
-5. [Handling Page Breaks and Printing](#handling-page-breaks-and-printing)
-6. [Conclusion](#conclusion)
+3. [Special Notes and Instructions](#special-notes-and-instructions)
+4. [Handling Page Breaks and Printing](#handling-page-breaks-and-printing)
+5. [Conclusion](#conclusion)
 
 ---
-
-## Introduction
-
-This Excel invoice application is designed to automate the process of generating invoices by calculating totals, discounts, and providing a printable format. It incorporates various Excel functions, such as cell merging, conditional formatting, and formula applications, to streamline invoice creation.
 
 ## Setting Up the Invoice
 
@@ -46,65 +41,29 @@ Use **Merge Cells** and formatting techniques to create special sections for:
 
 ### Total Calculation
 
-To calculate the total cost of each product, we used the formula:
-
-```excel
-=Quantity * Unit Price
-```
-
-Where:
-- `Quantity`: The number of items ordered.
-- `Unit Price`: The price per item.
-
-For example, in cell `F5`, the formula for the total might be:
-
-```excel
-= D5 * E5
-```
+To calculate the total cost of each product:
+- Use a formula that multiplies the quantity by the unit price.
 
 ### Discount Application
 
-To apply a discount on the total price, the formula is:
-
-```excel
-= IF(Discount > 0, Total * (1 - Discount), Total)
-```
-
-This formula calculates the discounted total by reducing the price based on the discount percentage. If no discount is given, the total remains unchanged. For example, in `G5`, the formula could look like:
-
-```excel
-= IF(F5>0, F5 * (1 - H5), F5)
-```
-
-Where:
-- `F5`: The calculated total before discount.
-- `H5`: The discount percentage (e.g., 5% would be `0.05`).
+To apply a discount on the total price:
+- Use an IF statement that checks if a discount is applicable and adjusts the total accordingly.
 
 ### Conditional Formatting for Discounts
 
-To ensure that no discount information appears if the discount is 0%, a conditional formatting rule is applied.
-
-Steps:
+To ensure that no discount information appears if there is no discount:
 1. Select the Discount cell.
 2. Go to **Conditional Formatting** > **New Rule**.
-3. Use the formula:
-   ```excel
-   = H5 <= 0
-   ```
-4. Set the font color to white (so it is invisible on a white background when there’s no discount).
+3. Set a rule that applies formatting based on the discount value.
 
 ## Special Notes and Instructions
 
-At the bottom of the invoice, there is a **Special Notes and Instructions** section. This allows users to input any additional information relevant to the customer.
+At the bottom of the invoice, there is a **Special Notes and Instructions** section that allows users to input any additional information relevant to the customer.
 
 Steps:
 1. Merge the required cells across the bottom of the invoice.
 2. Add a title such as "Special Notes and Instructions."
 3. Apply formatting, such as borders and background color, to distinguish this section.
-
-```excel
-= "Make all checks payable to [Your Company Name]"
-```
 
 ## Handling Page Breaks and Printing
 
@@ -117,6 +76,7 @@ To ensure the invoice prints on a single page:
 Finally, you can export the invoice as a **PDF**:
 - Press **Ctrl+P** to access the print menu.
 - Choose **Microsoft Print to PDF** and save the file.
+- Alternatively, select your printer if you prefer to print a hard copy of the invoice.
 
 ## Conclusion
 
